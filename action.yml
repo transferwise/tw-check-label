@@ -1,0 +1,15 @@
+name: 'Expect labels on PR'
+author: 'Janos Erdos'
+description: 'Check that specific labels are present on Pull Request.'
+branding:
+  icon: 'tag'
+  color: 'blue'
+inputs:
+  github-token:
+    description: 'Your GitHub token. It should by set to secrets.GITHUB_TOKEN'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github-token }}
