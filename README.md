@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: erdostw/tw-check-label@0.0.1
+    - uses: erdostw/tw-check-label@v0.0.4
       with:
         github-token: '${{ secrets.GITHUB_TOKEN }}'
 ```

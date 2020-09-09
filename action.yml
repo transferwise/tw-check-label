@@ -6,7 +6,7 @@ branding:
   color: 'gray-dark'
 inputs:
   github-token:
-    description: 'The GitHub token. It should by set to ${{ secrets.GITHUB_TOKEN }}'
+    description: 'The GitHub token. It should by set to secrets.GITHUB_TOKEN'
     required: true
 runs:
   using: 'docker'
