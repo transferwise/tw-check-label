@@ -1,19 +1,15 @@
-name: 'Verify Pull Request Labels'
-author: 'Jesus Vasquez'
-description: 'Verify that the PR has a valid label'
+name: 'Expect labels on PR'
+author: 'Janos Erdos'
+description: 'Check that specific labels are present on Pull Request.'
 branding:
   icon: 'check'
   color: 'gray-dark'
 inputs:
   github-token:
-    description: 'The GitHub token'
-    required: true
-  valid-labels:
-    description: 'List of valid labels'
+    description: 'The GitHub token. It should by set to ${{ secrets.GITHUB_TOKEN }}'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.github-token }}
-    - ${{ inputs.valid-labels }}
